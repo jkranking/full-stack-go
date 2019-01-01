@@ -25,7 +25,7 @@ func (s *StoreSuite) SetupSuite() {
 		stored as an instance variable,
 		as is the higher level `store`, that wraps the `db`
 	*/
-	connString := "dbname=<your test db name> sslmode=disable"
+	connString := "user=jeffrey dbname=bird_encyclopedia sslmode=disable"
 	db, err := sql.Open("postgres", connString)
 	if err != nil {
 		s.T().Fatal(err)
